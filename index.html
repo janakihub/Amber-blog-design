@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amber Blog</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-box {
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  background: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.two-col {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.two-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: #e6c9a8;
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>Amber Smith</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-box">
+    <h3>Introduction Goes Here</h3>
+    <p>Simple responsive blog design</p>
+    <button>Read More</button>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card">Travel</div>
+  <div class="card">Lifestyle</div>
+  <div class="card">Home</div>
+</section>
+
+<section class="two-col">
+  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+  <div class="content">
+    <h3>Blog Section</h3>
+    <p>This is a sample content section for the blog layout.</p>
+  </div>
+</section>
+
+<section class="two-col">
+  <div class="content">
+    <h3>Blog Section</h3>
+    <p>This is another sample content section.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+</section>
+
+<footer>
+  <h3>Get the Latest Updates</h3>
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+  <br>
+  <button>Subscribe</button>
+</footer>
+
+</body>
+</html>
